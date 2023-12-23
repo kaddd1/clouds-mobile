@@ -1,0 +1,54 @@
+.google-photo {
+    &-main {
+        background-color: var(--background-color);
+        height: 800px;
+    }
+    &-container {
+        max-width: 320px;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+    &-header {
+        display: flex;
+        align-items: center;
+        height: 48px;
+        background-color: var(--notmain-color);
+        padding-left: 1.3rem;
+        &__arrow {
+            color: white;
+            cursor: pointer;
+        }
+        &__text {
+            text-align: center;
+            font-weight: 400;
+            font-size: 14px;
+            font-family: 'Work Sans', sans-serif;
+            color: white;
+            margin-left: 4.5rem;
+            span {
+                color: #AAAAAA;
+            }
+        }
+    }
+    &-element {
+        display: flex;
+        align-items: center;
+        background-color: var(--notmain-color);
+        margin-bottom: 1rem;
+        height: 48px;
+        border-radius: 4px;
+        border: 1px solid var(--main-color);
+        cursor: pointer;
+        &__image-container {
+            margin-left: 1rem;
+        }
+        &__text {
+            font-family: 'Work Sans', sans-serif;
+            color: white;
+            font-weight: 400;
+            font-size: 14px;
+            margin-left: 1rem;
+        }
+    }
+}
+

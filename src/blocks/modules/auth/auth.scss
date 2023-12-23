@@ -1,0 +1,61 @@
+label, input {
+    display: block;
+}
+
+
+.authorization-section {
+    background-color: var(--background-color);
+    height: 800px;
+}
+
+.authorization {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--notmain-color);
+    height: 48px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.form-container {
+    max-width: 330px;
+    margin: 0 auto;
+    form {
+        label {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: left;
+            color: var(--text-color);
+            margin-bottom: 0.4rem;
+        }
+        input:not(:last-child) {
+            width: 328px;
+            height: 32px;
+            border-radius: 4px;
+            border: 1px solid #313140;
+            background-color: var(--notmain-color);
+            margin-bottom: 20px; 
+            color: #FFFFFF;
+        }
+        input[type="submit"] {
+            width: 164px;
+            height: 32px;
+            top: 208px;
+            left: 98px;
+            border-radius: 4px;
+            border: 1px solid #404054;
+            background-color: #313140;
+
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-color);
+            cursor: pointer;
+            margin: 0 auto;
+        }    
+    }
+}

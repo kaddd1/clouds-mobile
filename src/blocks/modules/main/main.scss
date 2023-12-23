@@ -1,0 +1,77 @@
+.main-section {
+    background-color: var(--background-color);
+    height: 800px;
+}
+
+.main-section__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--notmain-color);
+}
+
+.main-section__main-container {
+    max-width: 330px;
+    margin: 0 auto;
+}
+
+.main-section__hamburger-button,
+.main-section__search-button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.main-section__main-text {
+    font-family: 'Work Sans', sans-serif;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.main-section__select-project {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    color: #AAAAAA;
+    margin: 20px 0;
+    padding-left: 10px;
+}
+
+.main-section__block-project {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;    
+    width: 328px;
+    height: 64px;
+    border: 1px solid #313140; 
+    background-color: var(--notmain-color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.main-section__project {
+    display: grid;
+    grid-template-columns: auto minmax(100px, 1fr);
+    align-items: center;
+}
+
+.main-section__project-name {
+    font-family: 'Work Sans', sans-serif;
+    color: #FFFFFF;
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.main-section__image-container {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
