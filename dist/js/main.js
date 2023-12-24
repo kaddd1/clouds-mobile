@@ -1,38 +1,62 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/blocks/modules/footer/footer.js":
-/*!*********************************************!*\
-  !*** ./src/blocks/modules/footer/footer.js ***!
-  \*********************************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
 /***/ "./src/blocks/modules/google-photo/google-photo-statistics/google-photo-statistics.js":
 /*!********************************************************************************************!*\
   !*** ./src/blocks/modules/google-photo/google-photo-statistics/google-photo-statistics.js ***!
   \********************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 if (window.location.href.includes('http://localhost:4000/pages/Google%20Photo.html')) {
   var arrow = document.querySelector('.google-photo-header__arrow');
   arrow.addEventListener('click', function () {
     history.go(-1);
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-element').on('click', function (event) {
+      var projectName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).closest('.google-photo-element').find('.google-photo-element__text').text();
+      window.location.href = "".concat(projectName, ".html");
+    });
+  });
 }
 
 /***/ }),
 
-/***/ "./src/blocks/modules/header/header.js":
-/*!*********************************************!*\
-  !*** ./src/blocks/modules/header/header.js ***!
-  \*********************************************/
-/***/ (() => {
+/***/ "./src/blocks/modules/google-photo/statistic/statistic.js":
+/*!****************************************************************!*\
+  !*** ./src/blocks/modules/google-photo/statistic/statistic.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
+if (window.location.href.includes('http://localhost:4000/pages/Statistic.html')) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main-section__block-project').on('click', function (event) {
+      var projectName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).closest('.main-section__block-project').find('.main-section__project-name').text();
+      window.location.href = "pages/".concat(projectName, ".html");
+    });
+  });
+  var arrow = document.querySelector('.google-photo-statistic-header-arrow');
+  arrow.addEventListener('click', function () {
+    history.go(-1);
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dropdown-toggle').click(function () {
+      var dropdownMenu = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).next('.dropdown-menu');
+      dropdownMenu.slideToggle(400);
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.arrow').toggleClass('arrow-up');
+    });
+  });
+}
 
 /***/ }),
 
@@ -74,14 +98,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/header/header */ "./src/blocks/modules/header/header.js");
-/* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_header_header__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_main_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/main/main */ "./src/blocks/modules/main/main.js");
-/* harmony import */ var _modules_google_photo_google_photo_statistics_google_photo_statistics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/google-photo/google-photo-statistics/google-photo-statistics */ "./src/blocks/modules/google-photo/google-photo-statistics/google-photo-statistics.js");
-/* harmony import */ var _modules_google_photo_google_photo_statistics_google_photo_statistics__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_google_photo_google_photo_statistics_google_photo_statistics__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_3__);
-
+/* harmony import */ var _modules_main_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/main/main */ "./src/blocks/modules/main/main.js");
+/* harmony import */ var _modules_google_photo_google_photo_statistics_google_photo_statistics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/google-photo/google-photo-statistics/google-photo-statistics */ "./src/blocks/modules/google-photo/google-photo-statistics/google-photo-statistics.js");
+/* harmony import */ var _modules_google_photo_statistic_statistic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/google-photo/statistic/statistic */ "./src/blocks/modules/google-photo/statistic/statistic.js");
 
 
 
