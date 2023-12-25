@@ -639,14 +639,16 @@ input {
 }
 
 .google-photo-statistic-container {
-  max-width: 330px;
+  max-width: 340px;
   margin: 0 auto;
 }
 
-.google-photo-statistic-visits {
+.google-photo-statistic-visits,
+.google-photo-statistic-profit {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   padding: 1rem;
   width: 328px;
   max-height: 1704px;
@@ -654,6 +656,35 @@ input {
   border-radius: 4px;
   background-color: var(--notmain-color);
   margin-top: 25px;
+}
+
+.google-photo-statistic-profit .days {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(20px, 58px));
+  gap: 0.6rem;
+  font-size: 12px;
+  justify-items: end;
+}
+
+.google-photo-statistic-profit .days .day-jan-mar::after {
+  height: 39px;
+}
+
+.google-photo-statistic-profit .days .day-apr-jun::after {
+  height: 54px;
+}
+
+.google-photo-statistic-profit .days .day-jul-sep::after {
+  height: 44px;
+}
+
+.google-photo-statistic-profit .days .day-oct-dec::after {
+  height: 69px;
+}
+
+.google-photo-statistic-profit .marker {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .dropdown-toggle {

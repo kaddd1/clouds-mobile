@@ -45,8 +45,8 @@ if (window.location.href.includes('http://localhost:4000/pages/Statistic.html'))
       window.location.href = "pages/".concat(projectName, ".html");
     });
   });
-  var arrow = document.querySelector('.google-photo-statistic-header-arrow');
-  arrow.addEventListener('click', function () {
+  var arrow = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-statistic-header-arrow');
+  arrow.on('click', function () {
     history.go(-1);
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {

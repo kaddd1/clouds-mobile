@@ -25,13 +25,14 @@
             }
         }
         &-container {
-            max-width: 330px;
+            max-width: 340px;
             margin: 0 auto;
         }
-        &-visits {
+        &-visits, &-profit {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 0 auto;
             padding: 1rem;
             width: 328px;
             max-height: 1704px;
@@ -39,6 +40,41 @@
             border-radius: 4px;
             background-color: var(--notmain-color);
             margin-top: 25px;
+        }
+        &-profit {
+            .days {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(20px, 58px));
+                gap: 0.6rem;
+                font-size: 12px;
+                justify-items: end;
+                .day {
+                    &-jan-mar {
+                        &::after {
+                            height: 39px;                        
+                        }
+                    }
+                    &-apr-jun {
+                        &::after {
+                            height: 54px;                        
+                        }
+                    }
+                    &-jul-sep {
+                        &::after {
+                            height: 44px;                        
+                        }
+                    }
+                    &-oct-dec {
+                        &::after {
+                            height: 69px;                        
+                        }
+                    }
+                }
+            }
+            .marker {
+                font-size: 12px;
+                font-weight: 500;
+            }
         }
     }
 }
