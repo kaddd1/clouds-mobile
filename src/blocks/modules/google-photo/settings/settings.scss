@@ -1,0 +1,60 @@
+.google-photo {
+    &-header {
+        @include nav;
+    }
+    &-settings {
+        background-color: var(--background-color);
+        height: 800px;
+        &__container {
+            max-width: 320px;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+        &__item {
+            &__theme {
+                @include element; 
+                font-size: 14px;
+                font-weight: 400;
+                color: white;
+                padding: 0 1rem;
+                .theme-select {
+                    @include button;
+                    width: 88px;
+                    padding-left: 0.8rem;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    border-radius: 8px;
+                    outline: none;
+                }
+                .theme-wrapper {
+                    position: relative;
+                    margin-left: auto;
+                    &::after {
+                        content: '';
+                        background-image: url(../../../../img/google-photo-img/dropdownlistArrow.svg);
+                        width: 16px;
+                        height: 16px;
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%) rotate(90deg);
+                        transition: transform 0.3s ease; 
+                    }
+                    &.rotate::after {
+                        transform: translateY(-50%) rotate(0deg); /* Поворачиваем на 90 градусов */
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

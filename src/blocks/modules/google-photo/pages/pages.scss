@@ -1,0 +1,47 @@
+.google-photo-pages {
+    background-color: var(--background-color);
+    height: 800px;
+    &__container {
+        max-width: 320px;
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+    &__header {
+        @include nav;
+    }
+    &__route {
+        color: #AAAAAA;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 320px;
+        height: 48px;
+        background-color: var(--notmain-color);
+        border: 1px solid var(--main-color);
+        border-radius: 4px; 
+        padding-left: 0.7rem;
+        cursor: pointer;
+        &-container {
+            display: grid;
+            row-gap: 1rem;
+            grid-template-rows: 6;
+            grid-auto-rows: 1fr;
+            margin-top: 0.7rem;
+        }
+        &__text {
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+            margin-left: 0.4rem;
+        }
+        &__img {
+            height: 16px;
+        }
+    }
+
+}
+

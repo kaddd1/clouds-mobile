@@ -1,0 +1,91 @@
+@mixin background {
+    background-color: var(--background-color);
+    height: 800px;
+}
+
+@mixin nav {
+    display: grid;
+    padding-left: 15px;       
+    grid-template-columns: minmax(1px, 12px) minmax(1px, 300px); 
+    align-items: center;
+    height: 48px;
+    background-color: var(--notmain-color);
+    &__arrow {
+        cursor: pointer;
+        color: white;
+    }
+    &__text {
+        font-family: 'Work Sans', sans-serif;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        span {
+            color: #AAAAAA;
+        }
+    }
+}
+
+@mixin block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 328px;
+    height: 64px;
+    border: 1px solid #313140;
+    background-color: var(--notmain-color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+@mixin element {
+    display: flex;
+    align-items: center;
+    background-color: var(--notmain-color);
+    margin-bottom: 1rem;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+    &__image-container {
+        margin-left: 1rem;
+    }
+    &__text {
+        font-family: 'Work Sans', sans-serif;
+        color: white;
+        font-weight: 400;
+        font-size: 14px;
+        margin-left: 1rem;
+    }
+}
+
+@mixin button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 32px;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    background-color: var(--main-color);
+    border: 1px solid var(--grey-color);
+    border-radius: 4px;
+    .icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 0.3rem;
+        background-image: url(../../../../img/google-photo-img/add-ons/trash.svg);
+    }
+    &:nth-child(2) {
+        .icon {
+            background-image: url(../../../../img/google-photo-img/add-ons/update.svg);
+        }
+    }
+    &:hover {
+        background-color: grey;
+    }
+}

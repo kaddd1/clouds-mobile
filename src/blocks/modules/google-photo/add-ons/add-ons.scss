@@ -1,0 +1,70 @@
+.google-photo {
+    &-header {
+        @include nav;
+    }
+    &-addons {
+        background-color: var(--background-color);
+        height: 800px;
+        &__element {
+            background-color: var(--notmain-color);
+            border: 1px solid var(--grey-color);
+            border-radius: 4px;
+            width: 328px;
+            height: 146px;
+            margin: 0 auto;
+            margin-top: 1rem;
+            font-size: 14px;
+            font-weight: 400;
+            color: white;
+            padding: 0.8rem 1rem 0 1rem;
+            p {
+                font-size: 12px;
+                color: #AAAAAA;
+            }
+            &__buttons {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(10px, 100px));
+                gap: 1rem;
+                margin-left: 5rem;
+                margin-top: 1rem;
+            }
+            &__button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 32px;
+                font-size: 14px;
+                font-weight: 400;
+                color: white;
+                background-color: var(--main-color);
+                border: 1px solid var(--grey-color);
+                border-radius: 4px;
+                .icon {
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 0.3rem;
+                    background-image: url(../../../../img/google-photo-img/add-ons/trash.svg);
+                }
+                &:nth-child(2) {
+                    .icon {
+                        background-image: url(../../../../img/google-photo-img/add-ons/update.svg);
+                    }
+                }
+                &:hover {
+                    background-color: grey;
+                }
+            }
+            &__name {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                &__img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}

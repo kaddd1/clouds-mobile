@@ -26,6 +26,9 @@ label, input {
     max-width: 330px;
     margin: 0 auto;
     form {
+        input {
+            padding-left: 0.5rem
+        }
         label {
             font-family: 'Work Sans', sans-serif;
             font-size: 14px;

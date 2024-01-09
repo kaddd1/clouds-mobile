@@ -1,10 +1,74 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/blocks/modules/google-photo/google-photo-statistics/google-photo-statistics.js":
-/*!********************************************************************************************!*\
-  !*** ./src/blocks/modules/google-photo/google-photo-statistics/google-photo-statistics.js ***!
-  \********************************************************************************************/
+/***/ "./src/blocks/modules/google-photo/add-ons/add-ons.js":
+/*!************************************************************!*\
+  !*** ./src/blocks/modules/google-photo/add-ons/add-ons.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+if (window.location.href.includes('http://localhost:4000/pages/google-photo/Add-ons.html')) {
+  var arrow = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-header__arrow');
+  arrow.on('click', function () {
+    history.go(-1);
+  });
+}
+
+/***/ }),
+
+/***/ "./src/blocks/modules/google-photo/database/database.js":
+/*!**************************************************************!*\
+  !*** ./src/blocks/modules/google-photo/database/database.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+if (window.location.href.includes('http://localhost:4000/pages/google-photo/Database.html')) {
+  var arrow = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-database__header__arrow');
+  arrow.on('click', function () {
+    history.go(-1);
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+    var dropDownMenu = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dropdown-menu');
+    var innerDropDownMenu = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.inner-dropdown-menu');
+    dropDownMenu.hide();
+    innerDropDownMenu.hide();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '.dropdown-toggle', function () {
+      var currentDropDownMenu = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(dropDownMenu);
+      var currentArrow = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.arrow');
+      var currentInnerDropDownMenu = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.google-photo-database-list').find(innerDropDownMenu);
+      var currentInnerArrow = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.google-photo-database-list').find('.inner .arrow');
+      if (currentDropDownMenu.css('display') !== 'none') {
+        currentInnerDropDownMenu.slideUp();
+        currentInnerArrow.removeClass('arrow-up');
+      }
+      currentDropDownMenu.finish().slideToggle(400);
+      currentArrow.toggleClass('arrow-up');
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '.inner-dropdown-toggle', function () {
+      var currentInnerDropDownMenu = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find('.inner-dropdown-menu');
+      var currentArrow = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.arrow');
+      currentInnerDropDownMenu.stop().slideToggle(400);
+      currentArrow.toggleClass('arrow-up');
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/blocks/modules/google-photo/main/main.js":
+/*!******************************************************!*\
+  !*** ./src/blocks/modules/google-photo/main/main.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -13,15 +77,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 if (window.location.href.includes('http://localhost:4000/pages/Google%20Photo.html')) {
-  var arrow = document.querySelector('.google-photo-header__arrow');
-  arrow.addEventListener('click', function () {
-    history.go(-1);
-  });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-element').on('click', function (event) {
-      var projectName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).closest('.google-photo-element').find('.google-photo-element__text').text();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-element').on('click', function () {
+      var projectName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.google-photo-element__text').text();
+      window.location.href = "google-photo/".concat(projectName, ".html");
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-header__arrow').on('click', function () {
+      history.go(-1);
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/blocks/modules/google-photo/pages/main-php/main-php.js":
+/*!********************************************************************!*\
+  !*** ./src/blocks/modules/google-photo/pages/main-php/main-php.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+if (window.location.href.includes('http://localhost:4000/pages/google-photo/main.php.html')) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+    var arrow = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-pages__header__arrow');
+    var dropdownToggle = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dropdown-toggle');
+    var dropdownMenu = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dropdown-menu');
+    arrow.on('click', function () {
+      history.go(-1);
+    });
+    dropdownToggle.on('click', function () {
+      dropdownMenu.slideToggle(400);
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.arrow').toggleClass('arrow-up');
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/blocks/modules/google-photo/pages/pages.js":
+/*!********************************************************!*\
+  !*** ./src/blocks/modules/google-photo/pages/pages.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+if (window.location.href.includes('http://localhost:4000/pages/google-photo/Pages.html')) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+    var arrow = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-pages__header__arrow');
+    var back = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-pages__item:first');
+    var items = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-pages__item').not(':first');
+    arrow.on('click', function () {
+      history.go(-1);
+    });
+    items.on('click', function (event) {
+      var projectName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).closest('.google-photo-pages__item').find('.google-photo-pages__item__text').text();
       window.location.href = "".concat(projectName, ".html");
     });
+    back.on('click', function () {
+      history.go(-1);
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/blocks/modules/google-photo/settings/settings.js":
+/*!**************************************************************!*\
+  !*** ./src/blocks/modules/google-photo/settings/settings.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+if (window.location.href.includes('http://localhost:4000/pages/google-photo/Settings.html')) {
+  var wrapper = document.querySelector('.theme-wrapper');
+  wrapper.addEventListener('click', function () {
+    wrapper.classList.toggle('rotate');
   });
 }
 
@@ -38,19 +180,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
-if (window.location.href.includes('http://localhost:4000/pages/Statistic.html')) {
+if (window.location.href.includes('http://localhost:4000/pages/google-photo/Statistic.html')) {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main-section__block-project').on('click', function (event) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main-section').on('click', '.main-section__block-project', function (event) {
       var projectName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).closest('.main-section__block-project').find('.main-section__project-name').text();
       window.location.href = "pages/".concat(projectName, ".html");
     });
-  });
-  var arrow = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-statistic-header-arrow');
-  arrow.on('click', function () {
-    history.go(-1);
-  });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dropdown-toggle').click(function () {
+    var arrow = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.google-photo-statistic__header__arrow');
+    arrow.on('click', function () {
+      history.go(-1);
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '.dropdown-toggle', function () {
       var dropdownMenu = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).next('.dropdown-menu');
       dropdownMenu.slideToggle(400);
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.arrow').toggleClass('arrow-up');
@@ -99,8 +239,18 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_main_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/main/main */ "./src/blocks/modules/main/main.js");
-/* harmony import */ var _modules_google_photo_google_photo_statistics_google_photo_statistics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/google-photo/google-photo-statistics/google-photo-statistics */ "./src/blocks/modules/google-photo/google-photo-statistics/google-photo-statistics.js");
+/* harmony import */ var _modules_google_photo_main_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/google-photo/main/main */ "./src/blocks/modules/google-photo/main/main.js");
 /* harmony import */ var _modules_google_photo_statistic_statistic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/google-photo/statistic/statistic */ "./src/blocks/modules/google-photo/statistic/statistic.js");
+/* harmony import */ var _modules_google_photo_pages_pages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/google-photo/pages/pages */ "./src/blocks/modules/google-photo/pages/pages.js");
+/* harmony import */ var _modules_google_photo_pages_main_php_main_php__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/google-photo/pages/main-php/main-php */ "./src/blocks/modules/google-photo/pages/main-php/main-php.js");
+/* harmony import */ var _modules_google_photo_database_database__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/google-photo/database/database */ "./src/blocks/modules/google-photo/database/database.js");
+/* harmony import */ var _modules_google_photo_add_ons_add_ons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/google-photo/add-ons/add-ons */ "./src/blocks/modules/google-photo/add-ons/add-ons.js");
+/* harmony import */ var _modules_google_photo_settings_settings__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/google-photo/settings/settings */ "./src/blocks/modules/google-photo/settings/settings.js");
+
+
+
+
+
 
 
 

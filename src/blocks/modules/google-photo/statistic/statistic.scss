@@ -2,18 +2,18 @@
     &-statistic {
         background-color: var(--background-color);
         height: 800px;
-        &-header {
+        &__header {
             display: grid;
             padding-left: 15px;       
             grid-template-columns: minmax(1px, 12px) minmax(1px, 300px); 
             align-items: center;
             height: 48px;
             background-color: var(--notmain-color);
-            &-arrow {
+            &__arrow {
                 cursor: pointer;
                 color: white;
             }
-            &-text {
+            &__text {
                 font-family: 'Work Sans', sans-serif;
                 color: white;
                 font-size: 14px;
@@ -24,24 +24,24 @@
                 }
             }
         }
-        &-container {
+        &__container {
             max-width: 340px;
             margin: 0 auto;
         }
-        &-visits, &-profit {
+        &__visits, &__profit {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 0 auto;
             padding: 1rem;
-            width: 328px;
+            width: 320px;
             max-height: 1704px;
             border: 1px solid var(--grey-color);
             border-radius: 4px;
             background-color: var(--notmain-color);
             margin-top: 25px;
         }
-        &-profit {
+        &__profit {
             .days {
                 display: grid;
                 grid-template-columns: repeat(4, minmax(20px, 58px));
@@ -83,7 +83,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 312px;
+    width: 300px;
     height: 32px;
     background-color: var(--main-color);
     border: 1px solid var(--grey-color);

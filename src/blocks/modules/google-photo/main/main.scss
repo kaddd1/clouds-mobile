@@ -1,0 +1,17 @@
+.google-photo {
+    &-main {
+        @include background;
+    }
+    &-container {
+        max-width: 320px;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+    &-header {
+        @include nav;
+    }
+    &-element {
+       @include element;
+    }
+}
+

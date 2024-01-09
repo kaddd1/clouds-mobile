@@ -1,3 +1,8 @@
 import "%modules%/main/main";
-import "%modules%/google-photo/google-photo-statistics/google-photo-statistics";
+import "%modules%/google-photo/main/main";
 import "%modules%/google-photo/statistic/statistic";
+import "%modules%/google-photo/pages/pages";
+import "%modules%/google-photo/pages/main-php/main-php";
+import "%modules%/google-photo/database/database";
+import "%modules%/google-photo/add-ons/add-ons";
+import "%modules%/google-photo/settings/settings";
